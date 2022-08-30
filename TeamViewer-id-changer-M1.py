@@ -14,7 +14,7 @@ Tested on:
 TeamViewer 15.33.7 ID Changer
 for MAC OS Intel/M1
 Python 3.10.4 
-Version: 0.2 2022
+Version: 0.3 2022
 --------------------------------
 ''')
 
@@ -136,25 +136,8 @@ except:
     print("Cannot kill TeamViewer")
     sys.exit()
 print("TeamViewer process was killed.")
-# try:
-#     os.system("sudo rm -rf ~/Desktop/TeamViewer.app")
-#     os.system("sudo cp -R /Applications/TeamViewer.app ~/Desktop/")
-# except:
-#     print("Cannot copy TeamViewer app")
-#     sys.exit()
-# print("TeamViewer was copied.")
 
-# os.system("sudo codesign --force --deep --sign - ~/Desktop/TeamViewer.app")
-# os.system("sudo codesign --force --deep --sign - ~/Desktop/TeamViewer.app/Contents/MacOS/TeamViewer")
-os.system("sudo codesign --force --deep --sign - /Applications/TeamViewer.app")
 os.system("sudo codesign --force --deep --sign - /Applications/TeamViewer.app/Contents/MacOS/TeamViewer")
-
-# try:
-#     os.system("sudo mv  ~/Desktop/TeamViewer.app /Applications/")
-# except:
-#     print("Cannot replaced TeamViewer app")
-#     sys.exit()
-# print("TeamViewer was replaced.")
 
 print('''
 ID changed sucessfully.
